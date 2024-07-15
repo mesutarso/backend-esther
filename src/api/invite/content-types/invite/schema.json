@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "invites",
+  "info": {
+    "singularName": "invite",
+    "pluralName": "invites",
+    "displayName": "invite",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "noms": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "couple",
+        "singleton"
+      ]
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "in",
+        "out"
+      ],
+      "default": "out"
+    },
+    "table": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::table.table",
+      "inversedBy": "invites"
+    }
+  }
+}

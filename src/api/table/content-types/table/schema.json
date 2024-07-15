@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tables",
+  "info": {
+    "singularName": "table",
+    "pluralName": "tables",
+    "displayName": "table",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "numero": {
+      "type": "integer"
+    },
+    "invites": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::invite.invite",
+      "mappedBy": "table"
+    }
+  }
+}
